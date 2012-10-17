@@ -1,0 +1,16 @@
+# Linux
+.*
+!.gitignore
+*~
+
+# Vim
+.*.sw[a-z]
+*.un~
+Session.vim
+.netrwhist
+
+# IntelliJ IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
