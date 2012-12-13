@@ -33,4 +33,6 @@ zstyle ':vcs_info:*' enable git hg svn
 precmd () { vcs_info }
 PROMPT='%{%F{red}%}%n%{%f%}@%{%F{green}%}%m%{%f%}:%{%F{blue}%}%~%{%f%}${vcs_info_msg_0_}%# '
 
-source ~/.aliases
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+fi
