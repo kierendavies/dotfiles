@@ -19,6 +19,8 @@ bindkey -e
 bindkey '[3~' delete-char
 bindkey 'OH' beginning-of-line
 bindkey 'OF' end-of-line
+bindkey '[5~' up-line-or-history
+bindkey '[6~' down-line-or-history
 
 # Prompt
 autoload -U colors && colors
