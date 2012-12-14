@@ -1,4 +1,3 @@
-set textwidth=79
 set number
 set autoindent
 set smartindent
