@@ -21,6 +21,8 @@ bindkey 'OH' beginning-of-line
 bindkey 'OF' end-of-line
 bindkey '[5~' up-line-or-history
 bindkey '[6~' down-line-or-history
+bindkey '[1;5D' emacs-backward-word
+bindkey '[1;5C' emacs-forward-word
 
 # Prompt
 autoload -U colors && colors
