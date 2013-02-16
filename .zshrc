@@ -35,7 +35,7 @@ zstyle ':vcs_info:*' formats       \
 zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
 zstyle ':vcs_info:*' enable git hg svn
 precmd () { vcs_info }
-PROMPT='%{%F{red}%}%n%{%f%}@%{%F{green}%}%m%{%f%}:%{%F{blue}%}%~%{%f%}${vcs_info_msg_0_}%# '
+PROMPT='%(?..%B%{%F{yellow}%}%?%1v%{%f%}%b )%{%F{red}%}%n%{%f%}@%{%F{green}%}%m%{%f%}:%{%F{blue}%}%~%{%f%}${vcs_info_msg_0_}%# '
 
 if [ -f ~/.aliases ]; then
     source ~/.aliases
