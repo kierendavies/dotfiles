@@ -46,10 +46,3 @@ PROMPT='%(?..%B%{%F{yellow}%}%?%1v%{%f%}%b )%{%F{red}%}%n%{%f%}@%{%F{green}%}%m%
 if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
-
-# Environment variables
-export LANG=en_ZA.UTF-8
-export TERM=rxvt-unicode
-export EDITOR=vim
-export VISUAL=vim
-export PATH=$PATH:~/.gem/ruby/2.0.0/bin
