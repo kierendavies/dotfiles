@@ -18,11 +18,17 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
 bindkey -e
 bindkey '[3~' delete-char
 bindkey 'OH' beginning-of-line
+bindkey '[1~' beginning-of-line
+bindkey '[7~' beginning-of-line
 bindkey 'OF' end-of-line
+bindkey '[4~' end-of-line
+bindkey '[8~' end-of-line
 bindkey '[5~' up-line-or-history
 bindkey '[6~' down-line-or-history
 bindkey '[1;5D' emacs-backward-word
+bindkey 'Od' emacs-backward-word
 bindkey '[1;5C' emacs-forward-word
+bindkey 'Oc' emacs-forward-word
 
 # Prompt
 autoload -U colors && colors
@@ -40,3 +46,10 @@ PROMPT='%(?..%B%{%F{yellow}%}%?%1v%{%f%}%b )%{%F{red}%}%n%{%f%}@%{%F{green}%}%m%
 if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
+
+# Environment variables
+export LANG=en_ZA.UTF-8
+export TERM=rxvt-unicode
+export EDITOR=vim
+export VISUAL=vim
+export PATH=$PATH:~/.gem/ruby/2.0.0/bin
