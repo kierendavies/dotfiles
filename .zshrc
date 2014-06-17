@@ -1,6 +1,4 @@
 zstyle :compinstall filename '/home/kieren/.zshrc'
-autoload -Uz compinit
-compinit
 
 # History
 HISTFILE=~/.histfile
@@ -9,10 +7,14 @@ SAVEHIST=1000000
 setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
 
 # Completion
+autoload -Uz compinit
+compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
-       'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+       'r:|[._-]=* r:|=* l:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
 
 # Bindings
 bindkey -e
