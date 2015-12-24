@@ -44,3 +44,9 @@ zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
 zstyle ':vcs_info:*' enable git hg svn
 precmd () { vcs_info }
 PROMPT='%(?..%B%{%F{yellow}%}%?%1v%{%f%}%b )%{%F{red}%}%n%{%f%}@%{%F{green}%}%m%{%f%}:%{%F{blue}%}%~%{%f%}${vcs_info_msg_0_}%# '
+
+# Aliases
+alias rm="rm -i"
+alias ls="ls --color"
+alias ll="ls -lah"
+eval $(thefuck --alias)
