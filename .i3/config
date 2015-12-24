@@ -172,7 +172,3 @@ bar {
         tray_output primary
 }
 
-# Scratchpad terminal
-exec --no-startup-id urxvt -name 'scratchpad' -g 169x6
-for_window [class="URxvt" instance="scratchpad"] move scratchpad, border 1pixel, resize shrink height 448 px, resize grow width 2000 px, move position 0px 0px
-bindcode $mod+49 scratchpad show
