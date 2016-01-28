@@ -1,6 +1,7 @@
-zstyle :compinstall filename '/home/kieren/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 # History
+
 HISTFILE=~/.histfile
 HISTSIZE=1000000
 SAVEHIST=1000000
@@ -10,6 +11,7 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 
 # Completion
+
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
@@ -17,6 +19,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 
 # Bindings
+
 bindkey -e
 bindkey '[3~' delete-char
 bindkey 'OH' beginning-of-line
@@ -33,6 +36,7 @@ bindkey '[1;5C' emacs-forward-word
 bindkey 'Oc' emacs-forward-word
 
 # Prompt
+
 autoload -U colors && colors
 setopt prompt_subst
 autoload -Uz vcs_info
@@ -46,7 +50,15 @@ precmd () { vcs_info }
 PROMPT='%(?..%B%{%F{yellow}%}%?%1v%{%f%}%b )%{%F{red}%}%n%{%f%}@%{%F{green}%}%m%{%f%}:%{%F{blue}%}%~%{%f%}${vcs_info_msg_0_}%# '
 
 # Aliases
+
 alias rm="rm -i"
 alias ls="ls --color"
 alias ll="ls -lah"
+alias less="less -R"
+
 eval $(thefuck --alias)
+
+alias be="bundle exec"
+alias bers="be rails server"
+alias berc="be rails console"
+alias berdb="be rails dbconsole"
